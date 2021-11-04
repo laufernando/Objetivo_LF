@@ -1,0 +1,21 @@
+{
+  "name": "descargarExcel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1021.0",
+    "excel4node": "^1.7.2",
+    "mysql": "^2.18.1",
+    "serverless-aws-static-file-handler": "^3.0.8",
+    "stream": "0.0.2",
+    "twilio": "^3.71.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}

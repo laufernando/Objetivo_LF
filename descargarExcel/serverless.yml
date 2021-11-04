@@ -1,0 +1,27 @@
+
+service: descargarExcel
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+  stage: dev
+  region: us-east-2
+  iamRoleStatements:   
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: "*" 
+functions:
+  reporteVigores:
+    handler: handler.reporteVigores
+    memorySize: 1024 # in MB
+    timeout: 300 # 5 Minutes
+    events:
+      - http:
+          path: core/report/log/url
+          method: get
+          cors: true        
+          integration: lambda        
